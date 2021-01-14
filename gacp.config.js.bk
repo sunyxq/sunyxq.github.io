@@ -1,0 +1,6 @@
+module.exports = {
+  push: false,
+  add: false,
+  emoji: "emoji",
+  editor: false,
+};
