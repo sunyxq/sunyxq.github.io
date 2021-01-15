@@ -5,13 +5,12 @@ heroText: FE
 tagline: 学习前端，记录前端
 actionText: 开始 →
 actionLink: /base/
-# features:
-# - title: 简洁至上
-#   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-# - title: Vue驱动
-#   details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+features:
+  - title: 基础笔记
+    details: 记录前端使用方法
+  - title: 自动构建
+    details: 利用Jenkins + webhooks自动构建项目，节省发布时间
 # - title: 高性能
 #   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 footer: Powered by Vuepress | Copyright © sunyxq
 ---
-
