@@ -1,10 +1,14 @@
-# Webpack入门
+# Webpack 入门
 
 ## Pugins
 
-1. 
+1. html-webpack-plugin
 
-3. friendly-errors-webpack-plugin  
+   ```
+     npm i html-webpack-plugin
+   ```
+
+2. friendly-errors-webpack-plugin  
    [`friendly-errors-webpack-plugin`](https://github.com/geowarin/friendly-errors-webpack-plugin)
 
    ```npm
