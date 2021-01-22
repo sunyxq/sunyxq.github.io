@@ -18,3 +18,5 @@
 
 - [Nginx 基础入门](./nginx/base.md)
 - [Nginx 基础配置](./nginx/base-setting.md)
+
+- [Github Page 自动化部署](./deploy-blog.md)
