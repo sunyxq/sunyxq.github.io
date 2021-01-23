@@ -22,6 +22,7 @@
 
 ## CI/CD(自动化构建)
 
+- [Jenkins 基础入门](./ci/jenkins基础.md)
 - [gitee pages 自动化构建](./ci/gitee_pages自动化构建.md)
 
 * [Github Page 自动化部署](./deploy-blog.md)
