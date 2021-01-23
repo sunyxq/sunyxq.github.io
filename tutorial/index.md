@@ -20,4 +20,8 @@
 - [Nginx 基础入门](./nginx/base.md)
 - [Nginx 基础配置](./nginx/base-setting.md)
 
-- [Github Page 自动化部署](./deploy-blog.md)
+## CI/CD(自动化构建)
+
+- [gitee pages 自动化构建](./ci/gitee_pages自动化构建.md)
+
+* [Github Page 自动化部署](./deploy-blog.md)
