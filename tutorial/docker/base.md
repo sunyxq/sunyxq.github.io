@@ -22,7 +22,8 @@ docker info
 运行以上命令可验证 Docker 是否安装成功
 
 3. 启动 Docker
-   Docker 是服务器----客户端架构。命令行运行`docker`命令的时候，需要本机有 Docker 服务。如果这项服务没有启动，可以用下面的命令启动。
+
+Docker 是服务器----客户端架构。命令行运行`docker`命令的时候，需要本机有 Docker 服务。如果这项服务没有启动，可以用下面的命令启动。
 
 ```sh
 # service 命令的用法
@@ -69,11 +70,13 @@ docker pull ubuntu:15.10
 docker image pull ubuntu:15.10
 ```
 
-- 运行容器
+- 运行(新建)容器
 
 ```sh
 docker run ubuntu:15.10 /bin/echo "Hello Docker"
 ```
+
+每运行一次，就会新建一个容器，同样的命令运行两次，就会生成两个一模一样的容器文件。
 
 参数解析说明：
 
@@ -81,7 +84,7 @@ docker run ubuntu:15.10 /bin/echo "Hello Docker"
 - /bin/echo "Hello Docker"：在启动的容器里执行命令
   以上命令功能：Docker 以 ubuntu15.10 镜像创建一个新容器，然后在容器里执行 bin/echo "Hello world"，然后输出结果。
 
-```
+```sh
 docker run -i -t -d ubuntu:15.10 /bin/bash
 ```
 
@@ -97,9 +100,13 @@ docker run -i -t -d ubuntu:15.10 /bin/bash
 
 ```sh
 # 查看当前运行的容器
-docker ps
+docker ps  #
+# 等同于
+docker container ls
 # 查看所有容器，包括停止的
 docker ps -a
+# 等同于
+docker container ls -a
 # 查看最新创建的容器，只列出最后创建的
 docker ps -l
 # 查看网络端口
@@ -116,7 +123,11 @@ docker inspect [container ID | container name]
 
 ```sh
 docker stop [container ID | container name]
+# 等同于
+docker container stop [container ID | container name]
 ```
+
+向容器里面的主进程发出 SIGTERM 信号，然后过一段时间再发出 SIGKILL 信号。
 
 - 启动/重启容器
 
@@ -127,6 +138,34 @@ docker start [container ID | container name]
 docker restart [container ID | container name]
 ```
 
+- 终止容器运行
+
+```sh
+docker kill [container ID | container name]
+# 等同于
+docker container kill [container ID | container name]
+```
+
+直接向容器里面的主进程发出 SIGKILL 信号
+
+- 查看容器输出
+
+```sh
+docker logs [container ID | container name]
+# 等同于
+docker container logs [container ID | container name]
+```
+
+查看 docker 容器的输出，即容器里面 Shell 的标准输出。
+
+- 运行容器命令
+
+```
+docker exec -it [container ID | container name] /bin/bash
+```
+
+用于进入一个正在运行的 docker 容器，在容器的 Shell 执行命令
+
 - 删除容器
 
 ```sh
@@ -135,6 +174,14 @@ docker rm [container ID | container name]
 # 删除所有容器
 docker rm $(docker ps -aq)
 ```
+
+- 拷贝容器文件
+
+```
+docker cp [container ID | container name]:[/path/to/file] .
+```
+
+从正在运行的 Docker 容器里面，将文件拷贝到本机当前目录
 
 ## 参考链接
 
