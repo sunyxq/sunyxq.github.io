@@ -8,7 +8,7 @@
 
 - [React Context](./react/react-context.md)
 - [React Hooks](./react/react-hook.md)
-- [React 性能优化](./react/react性能优化.md)
+- [React 性能优化](./react/react-performance-optimization.md)
 
 ## Docker 教程
 
@@ -17,8 +17,8 @@
 
 ## Ningx 教程
 
-- [Nginx 基础入门](./nginx/base.md)
-- [Nginx 基础配置](./nginx/base-setting.md)
+- [Nginx 基础入门](./nginx/nginx-base.md)
+- [Nginx 基础配置](./nginx/nginx-base-setting.md)
 
 ## CI/CD(自动化构建)
 
