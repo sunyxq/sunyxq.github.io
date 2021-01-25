@@ -22,7 +22,10 @@
 
 ## CI/CD(自动化构建)
 
-- [Jenkins 基础入门](./ci/jenkins基础.md)
-- [gitee pages 自动化构建](./ci/gitee_pages自动化构建.md)
+- [Jenkins 基础入门](./ci/jenkins-base.md)
+- [gitee ages 自动化构建](./ci/gitee_pages-ci-and-deploy.md)
+- [Github Pages 自动化部署](./ci/github_pages-deploy.md)
 
-* [Github Page 自动化部署](./deploy-blog.md)
+## Linux/服务器
+
+- [CentOS 环境配置](./linux/cnetos-env-config.md)

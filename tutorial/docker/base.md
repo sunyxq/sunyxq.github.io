@@ -160,7 +160,7 @@ docker container logs [container ID | container name]
 
 - 运行容器命令
 
-```
+```sh
 docker exec -it [container ID | container name] /bin/bash
 ```
 
@@ -171,13 +171,26 @@ docker exec -it [container ID | container name] /bin/bash
 ```sh
 # 删除容器，删除容器时，容器必须是停止状态
 docker rm [container ID | container name]
-# 删除所有容器
+# 删除所有容器,要删除容器，需要先停止容器运行
+docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
+```
+
+- 删除镜像
+
+```sh
+docker image rm [image name | image id]
+# 等同于
+docker rmi [image name| image id]
+# 删除untagged images，就是那些id为<None>的image
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+# 删除全部镜像
+docker rmi ${docker images -q}
 ```
 
 - 拷贝容器文件
 
-```
+```sh
 docker cp [container ID | container name]:[/path/to/file] .
 ```
 
