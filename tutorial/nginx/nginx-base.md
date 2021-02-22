@@ -84,3 +84,5 @@ nginx -h
 ## 参考链接
 
 1. [MAC 下安装 nginx](https://segmentfault.com/a/1190000016020328)
+2. [nginx 安装及其配置详细教程](https://zhuanlan.zhihu.com/p/83890573)
+3. [Mac OS 系统下，Nginx 的配置和常用命令](https://www.jianshu.com/p/05900b778395)

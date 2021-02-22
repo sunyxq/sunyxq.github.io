@@ -46,3 +46,7 @@ docker run -d --name myjenkins -p 8200:8080 jenkins
 
 基于 Jenkins 镜像创建名为`myjenkins`容器并启动，容器端口`8200`(自定义任何未被使用端口)；`-d`表示容器会在后台运行，如果不加-d，则容器运行会占用此终端，如果终端关闭，则容器也相应关闭。
 在浏览器输入`localhost:8200`就可以初始化设置 Jekins 服务了
+
+## 参考链接
+
+1. [Docker 安装 Jenkins , 并解决初始安装插件失败](https://blog.csdn.net/loveLifeLoveCoding/article/details/105774844)

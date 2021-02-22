@@ -2,7 +2,8 @@
 
 ## SSCC 教程
 
-- [SCSS 基础入门](./scss/base.md)
+- [SCSS 基础入门](./css/scss-base.md)
+- [CSS 变量](./css/css-variable.md)
 
 ## React 教程
 
